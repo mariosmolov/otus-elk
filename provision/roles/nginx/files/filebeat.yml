@@ -1,0 +1,20 @@
+filebeat.prospectors:
+- input_type: log
+  paths:
+    - /var/log/nginx/access.log*
+    - /var/log/nginx/error.log*
+  tags: ["nginx"]
+  exclude_files: [".gz$"]
+  multiline:
+    pattern: "^\\s"
+    match: after
+- input_type: log
+  paths:
+    - /var/log/audit/audit.log*
+  tags: ["audit"]
+  exclude_files: [".gz$"]
+  multiline:
+    pattern: "^\\s"
+    match: after
+output.logstash:
+  hosts: ["192.168.168.110:5044"]
