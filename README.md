@@ -22,4 +22,15 @@
 Переходим по ссылке [Kibana](http://127.0.0.1:5601)
 
 Добавим индекс filebeat и увидим следующее:
+
 Пришел лог nginx
+
+![1](https://github.com/mariosmolov/otus-elk/blob/master/Screenshot_1.png)
+
+Посмортим правила auditd
+
+![2](https://github.com/mariosmolov/otus-elk/blob/master/Screenshot_3.png)
+
+И увидим что его лог тоже распарсился
+
+![3](https://github.com/mariosmolov/otus-elk/blob/master/Screenshot_2.png)
